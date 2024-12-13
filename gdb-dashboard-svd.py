@@ -29,7 +29,7 @@ class SVDDevicesHelper():
 
     @staticmethod
     def get_register_name(register):
-        if register.display_name is not None:
+        if hasattr(register, 'display_name') and register.display_name:
             return register.display_name
         return register.name
 
